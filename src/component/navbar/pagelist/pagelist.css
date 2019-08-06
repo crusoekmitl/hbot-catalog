@@ -1,0 +1,17 @@
+.bodymenu {
+    flex: 1;
+    background-color: #333333;
+    height: 100vh;
+}
+
+.bodymenu-list {
+    margin-left: 20px;
+    background-color: #555555;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bodymenu-title {
+    
+}

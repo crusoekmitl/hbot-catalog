@@ -1,0 +1,19 @@
+.header {
+    background-color: #333333;
+    height: 7vh;
+    flex: 1;
+}
+.logo {
+    background-image: url("./../../../assets/logo/hbot.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 45px;
+}
+
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+}

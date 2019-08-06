@@ -1,0 +1,39 @@
+.tap-con {
+    padding: 10px 20px;
+}
+
+.tap-con-in {
+    display: flex;
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+    padding: 15px 0px;
+    align-items: center;
+}
+
+.div-connect {
+    /* margin-left: auto; */
+}
+
+.div-btn-discon {
+    margin-left: auto;
+}
+
+.btn-discon {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.text-dis {
+    margin: 0px;
+    font-family: Roboto;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.text-con {
+    margin: 0px;
+    font-family: Roboto;
+    font-size: 12px;
+    color: #ffffff;
+}

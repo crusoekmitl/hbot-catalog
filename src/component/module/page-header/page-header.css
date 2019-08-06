@@ -1,0 +1,31 @@
+.tap {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+}
+
+.tap-icon-left {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.text-fb  {
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0px;
+
+}
+
+.text-cate {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.iconhead {
+    height: 30px;
+    width: 30px;
+}

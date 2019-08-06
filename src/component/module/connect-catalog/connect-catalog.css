@@ -1,0 +1,16 @@
+.tap-catalog-head {
+    display: flex;
+    flex-direction: column;
+    max-height: 18vh;
+    min-height: 18vh;
+    border-bottom: 1px solid #e9e9e9;
+
+}
+
+.tap-catalog-border {
+    padding: 10px 30px;
+}
+
+.tap-input-connect {
+    display: flex;
+}

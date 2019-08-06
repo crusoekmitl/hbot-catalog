@@ -1,0 +1,13 @@
+.tap-catalog {
+    max-height: 82vh;
+    min-height: 82vh;
+}
+
+.tap-catalog-box {
+    margin: 40px;
+    background-color: white;
+    height: auto;
+}
+.tap-catalog-button {
+    display: flex;
+}
