@@ -9,7 +9,7 @@ export default class PagebodyComponent extends React.Component {
     return (
       <div className="body" >
         <ConnectCatalogComponent />
-        <CatalogListComponent/>
+        {/* <CatalogListComponent/> */}
       </div>
     );
   }
