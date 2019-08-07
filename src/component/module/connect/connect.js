@@ -21,8 +21,8 @@ export default class ConnectComponent extends React.Component {
                     </div>
                     <div class="div-btn-discon">
                         <Button style={styles} >
-                            <a href={`${SERVER_URL}/api/login-fb`}>connect fb</a>
-                            {/* <p class="text-dis">Disconnect</p> */}
+                            {/* <a href={`${SERVER_URL}/api/login-fb`}>connect fb</a> */}
+                            <p class="text-dis">Disconnect</p>
                         </Button>
                     </div>
                 </div>
