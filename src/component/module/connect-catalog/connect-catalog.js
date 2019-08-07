@@ -7,12 +7,16 @@ import axios from 'axios'
 
 export default class ConnectCatalogComponent extends React.Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-            number : ''
+            number : '',
+            data : [],
+            name : '',
+            loading : false
         }
         this.numberId = this.numberId.bind(this)
+        this.getId = this.getId.bind(this)
     }
 
     numberId(e){
@@ -22,11 +26,48 @@ export default class ConnectCatalogComponent extends React.Component {
     }
 
     getId(){
-        console.log(this.state.number)
-        
+        var number = this.state.number
+
+        if(number==''){alert('error null'); return;}
+        axios.post('https://hedbotecommerce.herokuapp.com/api/catalogs', {
+            "idBusiness": number
+        })
+          .then( (response) => {
+                // console.log(response.data.owned_product_catalogs.data[1])
+                this.setState({
+                    name : response.data.owned_product_catalogs.data[1].name,
+                    data : response.data.owned_product_catalogs.data[1].products.data,
+                    loading : true
+                })
+                // console.log(this.state.name)
+                // console.log(this.state.data)
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 
     render() {
+
+        let list_data = []
+        this.state.data.map((val, i) => {
+           return list_data.push(<div key={i}>
+                    <div>
+                        <div>
+                            {val.name}
+                        </div>
+                        <div>
+                        {val.category}
+                        </div>
+                    </div>
+                    <div>
+                        <div> {val.image_url}</div>
+                        <div> {val.id}</div>
+                    </div>  
+                    <br />
+                </div>)
+            
+        })
         return (
             <div>
             <div class="tap-catalog-border">
@@ -55,16 +96,10 @@ export default class ConnectCatalogComponent extends React.Component {
              <div class="tap-catalog">
              <div class="tap-catalog-box">
                  <div>
-                     <div>
-                         catalog list
-                     </div>
-                     <div>
-                         product
-                     </div>
-                 </div>
-                 <div>
-                     <div>type</div>
-                     <div>product list </div>
+                     {
+                         this.state.loading == true? list_data : ''
+                     }
+
                  </div>
                  <div class="tap-catalog-button">
                      <Button
